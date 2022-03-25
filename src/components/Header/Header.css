@@ -1,0 +1,10 @@
+.navbar{
+    background-color: rgb(3, 3, 43);
+}
+nav a{
+    padding: 10px;
+    border-radius: 10px;
+}
+nav a:hover{
+    background-color: rgb(235, 0, 59);
+}
