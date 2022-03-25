@@ -1,0 +1,10 @@
+.add-cart-btn{
+    border: 0;
+    background-color: rgba(0, 47, 255, 0.295);
+    font-size: 18px;
+    height: 40px;
+    border-radius: 0 0 3px 3px;
+}
+.add-cart-btn:hover{
+    background-color: rgba(255, 108, 71, 0.37);
+}

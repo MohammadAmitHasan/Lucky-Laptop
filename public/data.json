@@ -1,0 +1,62 @@
+[
+    {
+        "id": "l1",
+        "name": "Dell Inspiron 15 3511 Intel Core i3",
+        "price": 48000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/dell-inspiron-15-7591-9th-gen-intel-core-i7-9750h-11579416651.webp"
+    },
+    {
+        "id": "l2",
+        "name": "Acer Extensa 15 EX215-54-37AH",
+        "price": 43000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/acer-extensa-15-ex215-52-56fj-10th-gen-intel-core-11600770095.webp"
+    },
+    {
+        "id": "l3",
+        "name": "Acer Aspire 3 A315-58-33VT",
+        "price": 45000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/acer-aspire-3-a315-58-33vt-intel-core-i3-1115g4-31633519440.webp"
+    },
+    {
+        "id": "l4",
+        "name": "Lenovo IdeaPad Slim 3i 15ITL6",
+        "price": 70000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/lenovo-ideapad-slim-3i-15itl6-11th-gen-intel-core-11636810342.webp"
+    },
+    {
+        "id": "l5",
+        "name": "Asus 14 X415EA",
+        "price": 63000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/asus-vivobook-14-x415ea-intel-core-i5-1135g7-14-11626342162.webp"
+    },
+    {
+        "id": "l6",
+        "name": "HP 14s-dq2888TU",
+        "price": 65000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/hp-14s-dq2888tu-intel-core-i5-1135g7-14-inch-hd-11643023006.webp"
+    },
+    {
+        "id": "l7",
+        "name": "HP 15s-eq2690AU",
+        "price": 61000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/hp-14s-dq2888tu-intel-core-i5-1135g7-14-inch-hd-11643023006.webp"
+    },
+    {
+        "id": "l8",
+        "name": "Microsoft Surface Laptop",
+        "price": 124000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/microsoft-surface-laptop-studio-intel-core-i7-11637402565.webp"
+    },
+    {
+        "id": "l9",
+        "name": "Apple MacBook Pro (Late 2021)",
+        "price": 220000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/apple-macbook-pro-late-2021-apple-m1-max-162-11636265644.webp"
+    },
+    {
+        "id": "l10",
+        "name": "MSI Modern 14 B11SB",
+        "price": 90000,
+        "img": "https://www.ryanscomputers.com/storage/products/medium/msi-modern-14-b11sb-intel-core-i5-1155g7-14-inch-11636978087.webp"
+    }
+]
