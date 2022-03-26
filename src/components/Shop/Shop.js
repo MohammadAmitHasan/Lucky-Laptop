@@ -17,8 +17,14 @@ const Shop = () => {
 
     // add to cart button handler
     const addToCart = product => {
-        const newCart = [...selectedProduct, product];
-        setSelectedProduct(newCart);
+        if (selectedProduct.length < 4) {
+            const newCart = [...selectedProduct, product];
+            setSelectedProduct(newCart);
+        }
+        else {
+            alert('You can select maximum 4 items');
+        }
+
     }
 
     // Clear Cart button handler
