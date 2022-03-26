@@ -22,7 +22,7 @@ const Shop = () => {
 
     return (
         <div className='row container-fluid pe-0'>
-            <div className='col col-8 col-lg-9'>
+            <div className='col col-12 col-md-8 col-lg-9 order-2 order-md-1'>
                 <h3 className='text-center my-3'>Best Products</h3>
                 <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4' id='product-container'>
                     {
@@ -36,7 +36,7 @@ const Shop = () => {
             </div>
 
             {/* cart */}
-            <div className='col col-4 col-lg-3' id='cart'>
+            <div className='col col-12 col-md-4 col-lg-3 order-1 order-md-2' id='cart'>
                 <Cart cart={cart}></Cart>
             </div>
         </div>

@@ -1,14 +1,16 @@
 .cart-item{
-    margin: 20px 10px;
+    margin: 20px 0px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px grey;
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 .cart-item p{
     margin: 0;
 }
 .cart-item img{
     width: 80px;
+    border-radius: 10px;
     margin-right: 10px;
 }
