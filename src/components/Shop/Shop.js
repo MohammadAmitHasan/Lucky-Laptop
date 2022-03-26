@@ -7,6 +7,7 @@ const Shop = () => {
 
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [chosenItem, setChosenItem] = useState({});
 
     useEffect(() => {
         fetch('data.json')
@@ -23,6 +24,12 @@ const Shop = () => {
     // Clear Cart button handler
     const clearCart = () => {
         setCart([]);
+    }
+
+    // Random product selection button handler
+    const selectRandomOne = () => {
+        const random = Math.floor(Math.random() * cart.length);
+        setChosenItem(cart[random]);
     }
 
     return (
@@ -44,7 +51,9 @@ const Shop = () => {
             <div className='col col-12 col-md-5 col-lg-4 col-xl-3 order-1 order-md-2' id='cart'>
                 <Cart
                     cart={cart}
+                    chosenItem={chosenItem}
                     clearCart={clearCart}
+                    selectRandomOne={selectRandomOne}
                 ></Cart>
             </div>
         </div>
