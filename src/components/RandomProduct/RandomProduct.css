@@ -1,0 +1,8 @@
+#random-item-container{
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+#random-item-container h3{
+    color: rgb(255, 0, 106);
+}

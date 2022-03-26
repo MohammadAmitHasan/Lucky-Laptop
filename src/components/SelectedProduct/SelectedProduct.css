@@ -1,4 +1,19 @@
 #selected-items-container{
     position: sticky;
-    top: 30px;
+    top: 10px;
+    overflow: auto;
+}
+.random-product-container{
+    border-radius: 10px;
+    background-color: rgba(105, 105, 110, 0.185);
+}
+.random-product-container img{
+    border-radius: 10px;
+}
+.random-product-container h3{
+    color: rgb(255, 0, 140);
+}
+#go-to-random{
+    text-decoration: none;
+    color: white;
 }

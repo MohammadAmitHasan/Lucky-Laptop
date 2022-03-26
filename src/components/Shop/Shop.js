@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SelectedProduct from '../SelectedProduct/SelectedProduct';
 import Product from '../Product/Product';
 import './Shop.css';
+import RandomProduct from '../RandomProduct/RandomProduct';
 
 const Shop = () => {
 
@@ -45,10 +46,20 @@ const Shop = () => {
         setSelectedProducts([]);
     }
 
+
     // Random product selection button handler
     const selectRandomOne = () => {
         const random = Math.floor(Math.random() * selectedProducts.length);
         setChosenItem(selectedProducts[random]);
+        // window.scrollTo({
+        //     top: 0,
+        //     behavior: 'smooth'
+        // });
+    }
+
+    // Remove the random product
+    const removeGivenProduct = () => {
+        setChosenItem({});
     }
 
     // Delete an item from selected list button handler
@@ -57,10 +68,20 @@ const Shop = () => {
         setSelectedProducts(restProducts);
     }
 
+    // Random selected data
+
+
     return (
-        <div className='row container-fluid pe-0'>
+        <div className='row container-fluid pe-0 mb-5'>
+
             <div className='col col-12 col-md-7 col-lg-8 col-xl-9 order-2 order-md-1'>
-                <h3 className='text-center my-3'>Best Products</h3>
+
+                <RandomProduct
+                    chosenItem={chosenItem}
+                    removeGivenProduct={removeGivenProduct}
+                ></RandomProduct>
+
+                <h3 className='text-center mb-3 mt-4'>Best Products</h3>
                 <div className='row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4' id='product-container'>
                     {
                         products.map(product => <Product
@@ -75,7 +96,7 @@ const Shop = () => {
             {/* Selected Product */}
             <div className='col col-12 col-md-5 col-lg-4 col-xl-3 order-1 order-md-2' id='cart'>
                 <SelectedProduct
-                    cart={selectedProducts}
+                    selectedProducts={selectedProducts}
                     chosenItem={chosenItem}
                     clearCart={clearCart}
                     selectRandomOne={selectRandomOne}
