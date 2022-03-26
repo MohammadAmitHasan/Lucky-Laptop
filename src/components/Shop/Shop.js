@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../Cart/Cart';
+import SelectedProduct from '../SelectedProduct/SelectedProduct';
 import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState([]);
     const [chosenItem, setChosenItem] = useState({});
 
     useEffect(() => {
@@ -17,19 +17,19 @@ const Shop = () => {
 
     // add to cart button handler
     const addToCart = product => {
-        const newCart = [...cart, product];
-        setCart(newCart);
+        const newCart = [...selectedProduct, product];
+        setSelectedProduct(newCart);
     }
 
     // Clear Cart button handler
     const clearCart = () => {
-        setCart([]);
+        setSelectedProduct([]);
     }
 
     // Random product selection button handler
     const selectRandomOne = () => {
-        const random = Math.floor(Math.random() * cart.length);
-        setChosenItem(cart[random]);
+        const random = Math.floor(Math.random() * selectedProduct.length);
+        setChosenItem(selectedProduct[random]);
     }
 
     return (
@@ -47,14 +47,14 @@ const Shop = () => {
                 </div>
             </div>
 
-            {/* cart */}
+            {/* Selected Product */}
             <div className='col col-12 col-md-5 col-lg-4 col-xl-3 order-1 order-md-2' id='cart'>
-                <Cart
-                    cart={cart}
+                <SelectedProduct
+                    cart={selectedProduct}
                     chosenItem={chosenItem}
                     clearCart={clearCart}
                     selectRandomOne={selectRandomOne}
-                ></Cart>
+                ></SelectedProduct>
             </div>
         </div>
     );

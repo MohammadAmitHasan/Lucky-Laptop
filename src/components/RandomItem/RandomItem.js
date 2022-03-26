@@ -23,7 +23,7 @@ const RandomItem = ({ selectRandomOne, chosenItem }) => {
                         <div class="modal-body">
                             <img className='w-50' src={img} alt="" />
                         </div>
-                        <h4>{name ? name : 'You have No product in the cart'}</h4>
+                        <h4>{name ? name : 'No product selected yet'}</h4>
                         <h5>Price: {price ? price : '0'}</h5>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -1,11 +1,11 @@
 import React from 'react';
 import CartItem from '../CartItem/CartItem';
 import RandomItem from '../RandomItem/RandomItem';
-import './Cart.css';
+import './SelectedProduct.css';
 
-const Cart = ({ cart, clearCart, selectRandomOne, chosenItem }) => {
+const SelectedProduct = ({ cart, clearCart, selectRandomOne, chosenItem }) => {
     return (
-        <div className='text-center'>
+        <div id='selected-items-container' className='text-center'>
             <h4 className='my-4'>Selected Products</h4>
             {
                 cart.map(cartItem => <CartItem
@@ -14,18 +14,16 @@ const Cart = ({ cart, clearCart, selectRandomOne, chosenItem }) => {
                 ></CartItem>)
             }
 
-            {/* Clear cart button */}
-            <button className='btn btn-danger' onClick={clearCart}>Clear Cart</button>
-            <br />
-
             {/* Select 1 random item button */}
             <RandomItem
                 selectRandomOne={selectRandomOne}
                 chosenItem={chosenItem}
             ></RandomItem>
 
+            {/* button of Clearing the selected product list */}
+            <button className='btn btn-danger mt-3' onClick={clearCart}>Choose Again</button>
         </div>
     );
 };
 
-export default Cart;
+export default SelectedProduct;
