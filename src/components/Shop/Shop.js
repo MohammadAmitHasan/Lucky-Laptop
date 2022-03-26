@@ -46,15 +46,10 @@ const Shop = () => {
         setSelectedProducts([]);
     }
 
-
     // Random product selection button handler
     const selectRandomOne = () => {
         const random = Math.floor(Math.random() * selectedProducts.length);
         setChosenItem(selectedProducts[random]);
-        // window.scrollTo({
-        //     top: 0,
-        //     behavior: 'smooth'
-        // });
     }
 
     // Remove the random product
@@ -67,9 +62,6 @@ const Shop = () => {
         const restProducts = selectedProducts.filter(selectedProduct => selectedProduct.id !== id);
         setSelectedProducts(restProducts);
     }
-
-    // Random selected data
-
 
     return (
         <div className='row container-fluid pe-0 mb-5'>

@@ -2,7 +2,6 @@ import React from 'react';
 import CartItem from '../CartItem/CartItem';
 import './SelectedProduct.css';
 
-
 const SelectedProduct = ({ selectedProducts, clearCart, selectRandomOne, deleteItem }) => {
 
     return (

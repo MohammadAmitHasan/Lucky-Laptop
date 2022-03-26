@@ -1,6 +1,6 @@
 # Choice Helper
 
-[Click to open the Live Site of the project](https://hasan-choice-helper.netlify.app/).
+##[Click to open the Live Site of the project](https://hasan-choice-helper.netlify.app/).
 
 React, Bootstrap are used to build the project
 
