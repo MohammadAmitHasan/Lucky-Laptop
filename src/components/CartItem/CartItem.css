@@ -1,0 +1,14 @@
+.cart-item{
+    margin: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+    display: flex;
+    align-items: center;
+}
+.cart-item p{
+    margin: 0;
+}
+.cart-item img{
+    width: 80px;
+    margin-right: 10px;
+}
