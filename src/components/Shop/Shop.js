@@ -48,8 +48,14 @@ const Shop = () => {
 
     // Random product selection button handler
     const selectRandomOne = () => {
-        const random = Math.floor(Math.random() * selectedProducts.length);
-        setChosenItem(selectedProducts[random]);
+        if (selectedProducts.length > 0) {
+            const random = Math.floor(Math.random() * selectedProducts.length);
+            setChosenItem(selectedProducts[random]);
+        }
+        else {
+            alert('No product selected yet');
+        }
+
     }
 
     // Remove the random product
