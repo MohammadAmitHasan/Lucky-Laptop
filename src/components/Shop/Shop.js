@@ -6,7 +6,7 @@ import './Shop.css';
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
-    const [selectedProduct, setSelectedProduct] = useState([]);
+    const [selectedProducts, setSelectedProduct] = useState([]);
     const [chosenItem, setChosenItem] = useState({});
 
     useEffect(() => {
@@ -17,9 +17,18 @@ const Shop = () => {
 
     // add to cart button handler
     const addToCart = product => {
-        if (selectedProduct.length < 4) {
-            const newCart = [...selectedProduct, product];
-            setSelectedProduct(newCart);
+
+        const productInCart = selectedProducts.find(selectedProduct => selectedProduct.id === product.id);
+
+        if (selectedProducts.length < 4) {
+            if (!productInCart) {
+                const newCart = [...selectedProducts, product];
+                setSelectedProduct(newCart);
+            }
+            else {
+                alert('Already selected');
+            }
+
         }
         else {
             alert('You can select maximum 4 items');
@@ -34,8 +43,8 @@ const Shop = () => {
 
     // Random product selection button handler
     const selectRandomOne = () => {
-        const random = Math.floor(Math.random() * selectedProduct.length);
-        setChosenItem(selectedProduct[random]);
+        const random = Math.floor(Math.random() * selectedProducts.length);
+        setChosenItem(selectedProducts[random]);
     }
 
     return (
@@ -56,7 +65,7 @@ const Shop = () => {
             {/* Selected Product */}
             <div className='col col-12 col-md-5 col-lg-4 col-xl-3 order-1 order-md-2' id='cart'>
                 <SelectedProduct
-                    cart={selectedProduct}
+                    cart={selectedProducts}
                     chosenItem={chosenItem}
                     clearCart={clearCart}
                     selectRandomOne={selectRandomOne}
