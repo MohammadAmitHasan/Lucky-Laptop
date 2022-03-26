@@ -6,9 +6,10 @@ import './Shop.css';
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
-    const [selectedProducts, setSelectedProduct] = useState([]);
+    const [selectedProducts, setSelectedProducts] = useState([]);
     const [chosenItem, setChosenItem] = useState({});
 
+    // Load data
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -18,17 +19,20 @@ const Shop = () => {
     // add to cart button handler
     const addToCart = product => {
 
+        // Get the value if already in selected list
         const productInCart = selectedProducts.find(selectedProduct => selectedProduct.id === product.id);
 
+        // Restricting user to select more than 4 products
         if (selectedProducts.length < 4) {
+
+            // Restricting user to select a product twice
             if (!productInCart) {
                 const newCart = [...selectedProducts, product];
-                setSelectedProduct(newCart);
+                setSelectedProducts(newCart);
             }
             else {
                 alert('Already selected');
             }
-
         }
         else {
             alert('You can select maximum 4 items');
@@ -38,13 +42,19 @@ const Shop = () => {
 
     // Clear Cart button handler
     const clearCart = () => {
-        setSelectedProduct([]);
+        setSelectedProducts([]);
     }
 
     // Random product selection button handler
     const selectRandomOne = () => {
         const random = Math.floor(Math.random() * selectedProducts.length);
         setChosenItem(selectedProducts[random]);
+    }
+
+    // Delete an item from selected list button handler
+    const deleteItem = (id) => {
+        const restProducts = selectedProducts.filter(selectedProduct => selectedProduct.id !== id);
+        setSelectedProducts(restProducts);
     }
 
     return (
@@ -69,6 +79,7 @@ const Shop = () => {
                     chosenItem={chosenItem}
                     clearCart={clearCart}
                     selectRandomOne={selectRandomOne}
+                    deleteItem={deleteItem}
                 ></SelectedProduct>
             </div>
         </div>

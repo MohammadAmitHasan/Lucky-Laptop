@@ -3,14 +3,15 @@ import CartItem from '../CartItem/CartItem';
 import RandomItem from '../RandomItem/RandomItem';
 import './SelectedProduct.css';
 
-const SelectedProduct = ({ cart, clearCart, selectRandomOne, chosenItem }) => {
+const SelectedProduct = ({ cart, clearCart, selectRandomOne, chosenItem, deleteItem }) => {
     return (
-        <div id='selected-items-container' className='text-center'>
-            <h4 className='my-4'>Selected Products</h4>
+        <div id='selected-items-container'>
+            <h4 className='my-4 text-center'>Selected Products</h4>
             {
                 cart.map(cartItem => <CartItem
                     key={cartItem.id}
                     cartItem={cartItem}
+                    deleteItem={deleteItem}
                 ></CartItem>)
             }
 
